@@ -9,7 +9,8 @@ use App\User;
 class Message extends Model
 {
     protected $table = 'messages';
-          protected $guarded=[];
+    
+    protected $guarded=[];
 
     public function Message (){
 
