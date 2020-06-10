@@ -3,6 +3,4 @@
 <form action="/messages" method="post">
     @include('message.form')
 <button>Add New Message</button>
-
-
 </form>

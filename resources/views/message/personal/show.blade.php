@@ -1,5 +1,5 @@
 @extends('layouts.chat')
-<h1>Message Detail</h1>
+<h1>Personal Message Detail</h1>
 <div>
     <a href="/messages">Messages</a><br>
     <a href="/messages/personal">Personal Messages</a><br>
@@ -22,8 +22,8 @@
 <strong>Message Athor Name</strong>
 <p>{{Auth::user()->name}}</p>
 <div>
-    <a href="/messages/{{$message->id}}/edit">Edit</a>
-    <form action="/messages/{{$message->id}}" method="post">
+    <a href="/messages/personal/{{$message->id}}/edit">Edit</a>
+    <form action="/messages/personal/{{$message->id}}" method="post">
         @method('DELETE')
         @csrf
         <button>Delete</button>

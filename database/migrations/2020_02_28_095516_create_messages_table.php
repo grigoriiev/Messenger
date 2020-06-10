@@ -26,13 +26,6 @@ class CreateMessagesTable extends Migration
                 ->on('users')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
-            Schema::enableForeignKeyConstraints();
-            $table->foreign('parent_id')
-                ->references('id')
-                ->on('messages')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-            $table->index('parent_id');
         });
     }
 
@@ -45,7 +38,6 @@ class CreateMessagesTable extends Migration
     {
         Schema::table('messages',function (Blueprint $table){
         $table->dropForeign('messages_user_id_foreign');
-        $table->dropForeign('messages_parent_id_foreign');
         });
         Schema::dropIfExists('messages');
     }

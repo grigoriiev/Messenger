@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+                        <a class="mt-0 mb-1" href="/messages">Comments</a><br>
                     You are logged in!
                 </div>
             </div>

@@ -20,18 +20,18 @@ class MessagePolicy
         //
     }
 
-    public function edit(User $user, Message $mailbox)
+    public function edit(User $user, Message $message)
     {
-        return $user->id == $mailbox->user_id;
+        return $user->id == $message->user_id;
     }
 
-    public function update(User $user, Message $mailbox)
+    public function update(User $user, Message $message)
     {
-        return $user->id == $mailbox->user_id;
+        return $user->id == $message->user_id;
     }
 
-    public function destroy(User $user, Message  $mailbox)
+    public function destroy(User $user, Message  $message)
     {
-        return $user->id == $mailbox->user_id;
+        return $user->id == $message->user_id;
     }
 }

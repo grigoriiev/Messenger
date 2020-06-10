@@ -60,11 +60,6 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-                        <div class="form-group d-flex flex-column">
-                            <label for="image"> Register Image</label>
-                            <input type="file" name="image" class="py-2">
-                            <div>{{ $errors->first('image') }}</div>
-                        </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
